@@ -35,7 +35,6 @@
 
   <script>
     const { createApp, ref } = Vue
-
     createApp({
       setup() {
         const links = [
@@ -43,18 +42,12 @@
           {text:'About',url:'about.html'},
           {text:'Contacts',url:'contact.html'}
         ]
-        return {
-          links
-        }
-      }
-    }).mount('nav')
-    createApp({
-      setup() {
         const pageTitle = ref('Hello vue!')
         const page_content = ref('i am vue mastery')
         return {
           pageTitle,
-          page_content
+          page_content,
+          links
         }
       }
     }).mount('#app')
